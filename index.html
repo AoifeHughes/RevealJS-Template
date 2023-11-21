@@ -94,6 +94,10 @@
         font-size: 30px;
         text-align: center;
       }
+      footer {
+        margin-top: 50px; /* Adjust this value to increase or decrease space */
+        font-size: 0.75em; /* Makes the footer text smaller */
+      }
     </style>
   </head>
 
@@ -106,15 +110,168 @@
         </section>
 
         <section>
-          <h2>Introduction</h2>
-          <p>
-            Exploring the impact and implications of Large Language Models in
-            modern computing.
-          </p>
-          <p>
-            Understanding the balance between unrestricted knowledge access and
-            ethical responsibilities.
-          </p>
+          <section>
+            <h1>Introduction</h1>
+            <ul>
+              <li class="fragment">
+                Exploring the impact and implications of Large Language Models
+                in modern computing.
+              </li>
+              <li class="fragment">
+                Understanding the balance between unrestricted knowledge access
+                and ethical responsibilities.
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>ChatGPT Content Policy</h2>
+            <ol>
+              <li class="fragment">
+                No generation of explicit or offensive content: Avoids creating
+                or promoting sexually explicit, violent, or offensive content.
+              </li>
+              <li class="fragment">
+                Respect for privacy: Does not discuss or speculate on private
+                information about individuals.
+              </li>
+              <li class="fragment">
+                No promotion of harmful or illegal activities: Does not provide
+                guidance on illegal or harmful activities.
+              </li>
+              <li class="fragment">
+                No medical or legal advice: Does not offer professional medical
+                or legal advice, recommends consulting qualified professionals.
+              </li>
+              <li class="fragment">
+                No financial advice: Avoids giving personalized financial
+                advice.
+              </li>
+              <li class="fragment">
+                No generating or spreading misinformation: Strives to provide
+                accurate information and correct misinformation.
+              </li>
+              <li class="fragment">
+                Respect for intellectual property: Does not generate content
+                that infringes on others' intellectual property rights.
+              </li>
+              <li class="fragment">
+                Inclusivity and sensitivity: Generates content that is
+                inclusive, respectful, and sensitive to diverse audiences and
+                topics.
+              </li>
+            </ol>
+          </section>
+
+          <section>
+            <h2>Downsides of ChatGPT Content Policy</h2>
+            <ol>
+              <li class="fragment">
+                Limited Range in Certain Topics: Restrictions on explicit
+                content, legal, medical, and financial advice may limit depth in
+                these areas.
+              </li>
+              <li class="fragment">
+                Over-Cautiousness in Responses: Efforts to avoid misinformation
+                or harmful advice can lead to overly cautious or vague
+                responses.
+              </li>
+              <li class="fragment">
+                Restriction on Creative Content: Intellectual property
+                limitations can restrict discussions about popular culture or
+                creative inquiries.
+              </li>
+              <li class="fragment">
+                Potential Over-Moderation: Focus on inclusivity and avoiding
+                offense may result in avoiding important but sensitive
+                discussions.
+              </li>
+              <li class="fragment">
+                Lack of Personalization in Advice: Avoidance of personalized
+                advice can limit the usefulness for specific individual
+                guidance.
+              </li>
+              <li class="fragment">
+                Challenges in Identifying Misinformation: The AI's ability to
+                identify and navigate misinformation is not infallible.
+              </li>
+              <li class="fragment">
+                Limitations in Discussing Current Events: Limited ability to
+                discuss recent events or developments due to training cut-off.
+              </li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <img
+              src="./images/chatGPT_murder.png"
+              style="width: 50%; float: left"
+            />
+          </section>
+          <section data-auto-animate>
+            <img
+              src="./images/chatGPT_murder.png"
+              style="width: 50%; float: left"
+            />
+            <img
+              src="./images/wizard_murder.png"
+              style="width: 50%; float: right"
+            />
+          </section>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <img
+              src="./images/chatGPT_tooth.png"
+              style="width: 50%; float: left"
+            />
+          </section>
+          <section data-auto-animate>
+            <img
+              src="./images/chatGPT_tooth.png"
+              style="width: 50%; float: left"
+            />
+            <img
+              src="./images/wizard_tooth.png"
+              style="width: 50%; float: right"
+            />
+          </section>
+        </section>
+
+        <section>
+          <h2>Lack of research or discussion in the area</h2>
+          <ol>
+            <li>
+              <b
+                >LLM Censorship: A Machine Learning Challenge or a Computer
+                Security Problem?</b
+              ><sup>1</sup> - This paper only discusses as a security risk
+            </li>
+            <li>
+              <b
+                >BadLlama: Cheaply Removing Safety Fine-Tuning from Llama 2-Chat
+                13B</b
+              ><sup>2</sup> - Discusses the feasibility and implications of
+              bypassing safety mechanisms in AI models
+            </li>
+          </ol>
+          <footer>
+            <p>
+              <sup>1</sup> David Glukhov, et al., "LLM Censorship: A Machine
+              Learning Challenge or a Computer Security Problem?", July 20,
+              2023.
+            </p>
+            <p>
+              <sup>2</sup> Pranav Gade, Charlie Rogers-Smith, Simon Lermen, and
+              Jeffrey Ladish, "BadLlama: Cheaply Removing Safety Fine-Tuning
+              from Llama 2-Chat 13B", October 31, 2023.
+            </p>
+          </footer>
         </section>
 
         <section>
@@ -213,11 +370,7 @@
           mathjax:
             "https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js",
           config: "TeX-AMS_HTML-full",
-          TeX: {
-            Macros: {
-              RR: "{\\bf R}",
-            },
-          },
+          TeX: { Macros: { RR: "{\\bf R}" } },
         },
 
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
