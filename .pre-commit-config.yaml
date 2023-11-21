@@ -1,31 +1,49 @@
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1  # Use the latest version
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.1.4"
     hooks:
-    -   id: trailing-whitespace
-    -   id: check-yaml
-    -   id: end-of-file-fixer
-    -   id: check-added-large-files
+      - id: ruff
+        args: ["--fix", "--show-fixes"]
+        exclude: \.md$
 
--   repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.29.0  # Use the latest version
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v4.5.0"
     hooks:
-    -   id: markdownlint
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      # - id: check-yaml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      #- id: name-tests-test
+      #  args: ["--pytest-test-first"]
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
 
--   repo: https://github.com/prettier/prettier
-    rev: "2.5.1"  # Use the latest version
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: "v1.10.0"
     hooks:
-    -   id: prettier
-        args: ['--write', '**/*.md', '**/*.js']
-        additional_dependencies: ['prettier-plugin-revealjs']
+      - id: rst-backticks
+      - id: rst-directive-colons
+      - id: rst-inline-touching-normal
 
--   repo: https://github.com/alexjurkiewicz/acts
-    rev: v1.3.0  # Use the latest version
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v3.0.3"
     hooks:
-    -   id: shellcheck
+      - id: prettier
+        types_or: [yaml, html, css, scss, javascript, json]
+        args: [--prose-wrap=always]
 
--   repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.26.3  # Use the latest version
+  - repo: https://github.com/asottile/blacken-docs
+    rev: "1.16.0"
     hooks:
-    -   id: yamllint
-        args: ['-d', '{extends: default, rules: {line-length: {max: 120}}}', '**/*.yml', '**/*.yaml']
+      - id: blacken-docs
+        additional_dependencies: [black==23.3.0]
+        exclude: \.md$
+
+  # - repo: https://github.com/shellcheck-py/shellcheck-py
+  #   rev: "v0.9.0.2"
+  #   hooks:
+  #     - id: shellcheck
