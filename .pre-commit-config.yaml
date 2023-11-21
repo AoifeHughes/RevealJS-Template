@@ -1,0 +1,31 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1  # Use the latest version
+    hooks:
+    -   id: trailing-whitespace
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: check-added-large-files
+
+-   repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.29.0  # Use the latest version
+    hooks:
+    -   id: markdownlint
+
+-   repo: https://github.com/prettier/prettier
+    rev: "2.5.1"  # Use the latest version
+    hooks:
+    -   id: prettier
+        args: ['--write', '**/*.md', '**/*.js']
+        additional_dependencies: ['prettier-plugin-revealjs']
+
+-   repo: https://github.com/alexjurkiewicz/acts
+    rev: v1.3.0  # Use the latest version
+    hooks:
+    -   id: shellcheck
+
+-   repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.26.3  # Use the latest version
+    hooks:
+    -   id: yamllint
+        args: ['-d', '{extends: default, rules: {line-length: {max: 120}}}', '**/*.yml', '**/*.yaml']
