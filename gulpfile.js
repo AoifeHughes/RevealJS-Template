@@ -250,17 +250,15 @@ gulp.task("qunit", () => {
           .then((result) => {
             if (result.stats.failed > 0) {
               console.log(
-                `${"!"} ${filename} [${result.stats.passed}/${
-                  result.stats.total
-                }] in ${result.stats.runtime}ms`.red,
+                `${"!"} ${filename} [${result.stats.passed}/${result.stats.total}] in ${result.stats.runtime}ms`
+                  .red,
               );
               // qunit.printResultSummary(result, console);
               qunit.printFailedTests(result, console);
             } else {
               console.log(
-                `${"✔"} ${filename} [${result.stats.passed}/${
-                  result.stats.total
-                }] in ${result.stats.runtime}ms`.green,
+                `${"✔"} ${filename} [${result.stats.passed}/${result.stats.total}] in ${result.stats.runtime}ms`
+                  .green,
               );
             }
 

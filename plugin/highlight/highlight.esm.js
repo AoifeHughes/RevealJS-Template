@@ -150,9 +150,9 @@ function _(e, t) {
       "Map" === n || "Set" === n
         ? Array.from(e)
         : "Arguments" === n ||
-          /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-        ? d(e, t)
-        : void 0
+            /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+          ? d(e, t)
+          : void 0
     );
   }
 }
@@ -165,12 +165,12 @@ var u =
     "undefined" != typeof globalThis
       ? globalThis
       : "undefined" != typeof window
-      ? window
-      : "undefined" != typeof global
-      ? global
-      : "undefined" != typeof self
-      ? self
-      : {},
+        ? window
+        : "undefined" != typeof global
+          ? global
+          : "undefined" != typeof self
+            ? self
+            : {},
   m = function (e) {
     return e && e.Math == Math && e;
   },
@@ -454,8 +454,8 @@ var Ke = {
     e !== je
       ? (i ? !s && e[t] && (o = !0) : delete e[t], o ? (e[t] = n) : Xe(e, t, n))
       : o
-      ? (e[t] = n)
-      : Je(t, n);
+        ? (e[t] = n)
+        : Je(t, n);
 })(Function.prototype, "toString", function () {
   return ("function" == typeof this && tt(this).source) || et(this);
 });
@@ -881,16 +881,16 @@ var kn = Mn && +Mn,
           ? ""
           : void 0
         : (a = i.charCodeAt(o)) < 55296 ||
-          a > 56319 ||
-          o + 1 === s ||
-          (r = i.charCodeAt(o + 1)) < 56320 ||
-          r > 57343
-        ? e
-          ? i.charAt(o)
-          : a
-        : e
-        ? i.slice(o, o + 2)
-        : r - 56320 + ((a - 55296) << 10) + 65536;
+            a > 56319 ||
+            o + 1 === s ||
+            (r = i.charCodeAt(o + 1)) < 56320 ||
+            r > 57343
+          ? e
+            ? i.charAt(o)
+            : a
+          : e
+            ? i.slice(o, o + 2)
+            : r - 56320 + ((a - 55296) << 10) + 65536;
     };
   },
   Ca = { codeAt: fa(!1), charAt: fa(!0) },
@@ -981,10 +981,10 @@ ya(
               );
             }
           : "0".split(void 0, 0).length
-          ? function (e, n) {
-              return void 0 === e && 0 === n ? [] : t.call(this, e, n);
-            }
-          : t),
+            ? function (e, n) {
+                return void 0 === e && 0 === n ? [] : t.call(this, e, n);
+              }
+            : t),
       [
         function (t, n) {
           var r = Da(this),
@@ -1097,10 +1097,10 @@ var qa = k,
               return 0 === d
                 ? i
                 : d <= s
-                ? void 0 === a[d - 1]
-                  ? l.charAt(1)
-                  : a[d - 1] + l.charAt(1)
-                : i;
+                  ? void 0 === a[d - 1]
+                    ? l.charAt(1)
+                    : a[d - 1] + l.charAt(1)
+                  : i;
             }
             c = a[_ - 1];
         }
@@ -1380,19 +1380,19 @@ var Wr = "[object z]" === String(zr),
         return void 0 === e
           ? "Undefined"
           : null === e
-          ? "Null"
-          : "string" ==
-            typeof (n = (function (e, t) {
-              try {
-                return e[t];
-              } catch (e) {}
-            })((t = Object(e)), Kr))
-          ? n
-          : jr
-          ? Qr(t)
-          : "Object" == (a = Qr(t)) && "function" == typeof t.callee
-          ? "Arguments"
-          : a;
+            ? "Null"
+            : "string" ==
+                typeof (n = (function (e, t) {
+                  try {
+                    return e[t];
+                  } catch (e) {}
+                })((t = Object(e)), Kr))
+              ? n
+              : jr
+                ? Qr(t)
+                : "Object" == (a = Qr(t)) && "function" == typeof t.callee
+                  ? "Arguments"
+                  : a;
       },
   Zr = Xr,
   Jr = kr,
@@ -1506,10 +1506,10 @@ var gi,
           Ti(e, Ni)
             ? e[Ni]
             : "function" == typeof e.constructor && e instanceof e.constructor
-            ? e.constructor.prototype
-            : e instanceof Object
-            ? Ri
-            : null
+              ? e.constructor.prototype
+              : e instanceof Object
+                ? Ri
+                : null
         );
       },
   Oi = E,
@@ -1848,8 +1848,8 @@ Jo(
         (0 === d
           ? (n = a = 0)
           : 1 === d
-          ? ((n = 0), (a = c - _))
-          : ((n = d - 2), (a = ls(ss(ts(t), 0), c - _))),
+            ? ((n = 0), (a = c - _))
+            : ((n = d - 2), (a = ls(ss(ts(t), 0), c - _))),
         c + n - a > 9007199254740991)
       )
         throw TypeError("Maximum allowed length exceeded");
@@ -1985,10 +1985,10 @@ var Fs = function (e) {
       return !t || a >= t.length
         ? ((e.target = void 0), { value: void 0, done: !0 })
         : "keys" == n
-        ? { value: a, done: !1 }
-        : "values" == n
-        ? { value: t[a], done: !1 }
-        : { value: [a, t[a]], done: !1 };
+          ? { value: a, done: !1 }
+          : "values" == n
+            ? { value: t[a], done: !1 }
+            : { value: [a, t[a]], done: !1 };
     },
     "values",
   );
@@ -2068,8 +2068,8 @@ var il = ne,
         return d
           ? (il(e), m ? p(e[0], e[1], g) : p(e[0], e[1]))
           : m
-          ? p(e, g)
-          : p(e);
+            ? p(e, g)
+            : p(e);
       };
     if (u) a = e;
     else {
@@ -2127,20 +2127,20 @@ var il = ne,
                 return t.call(this, 0 === e ? 0 : e), this;
               }
             : "delete" == e
-            ? function (e) {
-                return !(r && !Cl(e)) && t.call(this, 0 === e ? 0 : e);
-              }
-            : "get" == e
-            ? function (e) {
-                return r && !Cl(e) ? void 0 : t.call(this, 0 === e ? 0 : e);
-              }
-            : "has" == e
-            ? function (e) {
-                return !(r && !Cl(e)) && t.call(this, 0 === e ? 0 : e);
-              }
-            : function (e, n) {
-                return t.call(this, 0 === e ? 0 : e, n), this;
-              },
+              ? function (e) {
+                  return !(r && !Cl(e)) && t.call(this, 0 === e ? 0 : e);
+                }
+              : "get" == e
+                ? function (e) {
+                    return r && !Cl(e) ? void 0 : t.call(this, 0 === e ? 0 : e);
+                  }
+                : "has" == e
+                  ? function (e) {
+                      return !(r && !Cl(e)) && t.call(this, 0 === e ? 0 : e);
+                    }
+                  : function (e, n) {
+                      return t.call(this, 0 === e ? 0 : e, n), this;
+                    },
         );
       };
     if (
@@ -2355,8 +2355,8 @@ var il = ne,
             ? "keys" == t
               ? { value: n.key, done: !1 }
               : "values" == t
-              ? { value: n.value, done: !1 }
-              : { value: [n.key, n.value], done: !1 }
+                ? { value: n.value, done: !1 }
+                : { value: [n.key, n.value], done: !1 }
             : ((e.target = void 0), { value: void 0, done: !0 });
         },
         n ? "entries" : "values",
@@ -3649,10 +3649,10 @@ function fm(e, t) {
     "string" == typeof e
       ? r(n, e.split(" "))
       : Array.isArray(e)
-      ? r(n, e)
-      : Object.keys(e).forEach(function (n) {
-          Object.assign(a, fm(e[n], t, n));
-        }),
+        ? r(n, e)
+        : Object.keys(e).forEach(function (n) {
+            Object.assign(a, fm(e[n], t, n));
+          }),
     a
   );
   function r(e, n) {
@@ -3670,10 +3670,10 @@ function Cm(e, t) {
   return t
     ? Number(t)
     : (function (e) {
-        return Tm.includes(e.toLowerCase());
-      })(e)
-    ? 0
-    : 1;
+          return Tm.includes(e.toLowerCase());
+        })(e)
+      ? 0
+      : 1;
 }
 function Nm(n, r) {
   function i(e, t) {
@@ -4011,11 +4011,11 @@ var Om = {
                   ? e
                   : t
                 : "start" === t[0].event
-                ? e
-                : t
+                  ? e
+                  : t
               : e.length
-              ? e
-              : t;
+                ? e
+                : t;
           }
           function s(e) {
             function t(e) {
@@ -4518,8 +4518,8 @@ var Im = {},
                       ? "<br>"
                       : e
                     : _.tabReplace
-                    ? e.replace(/\t/g, _.tabReplace)
-                    : e;
+                      ? e.replace(/\t/g, _.tabReplace)
+                      : e;
                 })
               : e;
           })(e)
@@ -26281,8 +26281,8 @@ var Vb = function (e) {
             return e.match(/\|\d+$/) || n.includes(e)
               ? e
               : r(e)
-              ? "".concat(e, "|0")
-              : e;
+                ? "".concat(e, "|0")
+                : e;
           })
         );
       })(s, {
@@ -29969,8 +29969,8 @@ var of = {
             return "number" == typeof e.end
               ? e.start + of.HIGHLIGHT_LINE_RANGE_DELIMITER + e.end
               : "number" == typeof e.start
-              ? e.start
-              : "";
+                ? e.start
+                : "";
           })
           .join(of.HIGHLIGHT_LINE_DELIMITER);
       })

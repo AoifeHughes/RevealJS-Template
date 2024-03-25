@@ -18,10 +18,10 @@ function t(t) {
           n(t, e, a[e]);
         })
       : Object.getOwnPropertyDescriptors
-      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
-      : e(Object(a)).forEach(function (e) {
-          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
-        });
+        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
+        : e(Object(a)).forEach(function (e) {
+            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
+          });
   }
   return t;
 }
