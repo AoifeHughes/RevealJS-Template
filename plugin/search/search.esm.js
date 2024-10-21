@@ -2,12 +2,12 @@ var e =
     "undefined" != typeof globalThis
       ? globalThis
       : "undefined" != typeof window
-      ? window
-      : "undefined" != typeof global
-      ? global
-      : "undefined" != typeof self
-      ? self
-      : {},
+        ? window
+        : "undefined" != typeof global
+          ? global
+          : "undefined" != typeof self
+            ? self
+            : {},
   t = function (e) {
     try {
       return !!e();
@@ -438,8 +438,8 @@ var kt = {
     e !== $t
       ? (i ? !a && e[t] && (c = !0) : delete e[t], c ? (e[t] = n) : Lt(e, t, n))
       : c
-      ? (e[t] = n)
-      : Ut(t, n);
+        ? (e[t] = n)
+        : Ut(t, n);
 })(Function.prototype, "toString", function () {
   return ("function" == typeof this && Ft(this).source) || Dt(this);
 });
@@ -751,16 +751,16 @@ var sr = ut.exports,
           ? ""
           : void 0
         : (r = i.charCodeAt(c)) < 55296 ||
-          r > 56319 ||
-          c + 1 === a ||
-          (o = i.charCodeAt(c + 1)) < 56320 ||
-          o > 57343
-        ? e
-          ? i.charAt(c)
-          : r
-        : e
-        ? i.slice(c, c + 2)
-        : o - 56320 + ((r - 55296) << 10) + 65536;
+            r > 56319 ||
+            c + 1 === a ||
+            (o = i.charCodeAt(c + 1)) < 56320 ||
+            o > 57343
+          ? e
+            ? i.charAt(c)
+            : r
+          : e
+            ? i.slice(c, c + 2)
+            : o - 56320 + ((r - 55296) << 10) + 65536;
     };
   },
   Tr = { codeAt: Rr(!1), charAt: Rr(!0) }.charAt,
@@ -877,10 +877,10 @@ var sr = ut.exports,
               return 0 === s
                 ? i
                 : s <= a
-                ? void 0 === r[s - 1]
-                  ? u.charAt(1)
-                  : r[s - 1] + u.charAt(1)
-                : i;
+                  ? void 0 === r[s - 1]
+                    ? u.charAt(1)
+                    : r[s - 1] + u.charAt(1)
+                  : i;
             }
             l = r[f - 1];
         }
@@ -977,19 +977,19 @@ var Gr = "[object z]" === String(Wr),
         return void 0 === e
           ? "Undefined"
           : null === e
-          ? "Null"
-          : "string" ==
-            typeof (n = (function (e, t) {
-              try {
-                return e[t];
-              } catch (e) {}
-            })((t = Object(e)), qr))
-          ? n
-          : Xr
-          ? Yr(t)
-          : "Object" == (r = Yr(t)) && "function" == typeof t.callee
-          ? "Arguments"
-          : r;
+            ? "Null"
+            : "string" ==
+                typeof (n = (function (e, t) {
+                  try {
+                    return e[t];
+                  } catch (e) {}
+                })((t = Object(e)), qr))
+              ? n
+              : Xr
+                ? Yr(t)
+                : "Object" == (r = Yr(t)) && "function" == typeof t.callee
+                  ? "Arguments"
+                  : r;
       },
   Jr = Gr
     ? {}.toString
