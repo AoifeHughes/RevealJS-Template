@@ -2,21 +2,22 @@
   "object" == typeof exports && "undefined" != typeof module
     ? (module.exports = t())
     : "function" == typeof define && define.amd
-    ? define(t)
-    : ((e =
-        "undefined" != typeof globalThis ? globalThis : e || self).RevealMath =
-        t());
+      ? define(t)
+      : ((e =
+          "undefined" != typeof globalThis
+            ? globalThis
+            : e || self).RevealMath = t());
 })(this, function () {
   "use strict";
   function e(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
       var r = Object.getOwnPropertySymbols(e);
-      t &&
+      (t &&
         (r = r.filter(function (t) {
           return Object.getOwnPropertyDescriptor(e, t).enumerable;
         })),
-        n.push.apply(n, r);
+        n.push.apply(n, r));
     }
     return n;
   }
@@ -28,10 +29,14 @@
             n(t, e, a[e]);
           })
         : Object.getOwnPropertyDescriptors
-        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
-        : e(Object(a)).forEach(function (e) {
-            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
-          });
+          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
+          : e(Object(a)).forEach(function (e) {
+              Object.defineProperty(
+                t,
+                e,
+                Object.getOwnPropertyDescriptor(a, e),
+              );
+            });
     }
     return t;
   }
@@ -71,29 +76,29 @@
               "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js") +
             "?config=" +
             (o.config || "TeX-AMS_HTML-full");
-        (o.tex2jax = t(t({}, n.tex2jax), a.tex2jax)),
+        ((o.tex2jax = t(t({}, n.tex2jax), a.tex2jax)),
           (o.mathjax = o.config = null),
           (function (e, t) {
             var n = this,
               r = document.querySelector("head"),
               a = document.createElement("script");
-            (a.type = "text/javascript"), (a.src = e);
+            ((a.type = "text/javascript"), (a.src = e));
             var o = function () {
               "function" == typeof t && (t.call(), (t = null));
             };
-            (a.onload = o),
+            ((a.onload = o),
               (a.onreadystatechange = function () {
                 "loaded" === n.readyState && o();
               }),
-              r.appendChild(a);
+              r.appendChild(a));
           })(i, function () {
-            MathJax.Hub.Config(o),
+            (MathJax.Hub.Config(o),
               MathJax.Hub.Queue(["Typeset", MathJax.Hub, e.getRevealElement()]),
               MathJax.Hub.Queue(e.layout),
               e.on("slidechanged", function (e) {
                 MathJax.Hub.Queue(["Typeset", MathJax.Hub, e.currentSlide]);
-              });
-          });
+              }));
+          }));
       },
     };
   };
