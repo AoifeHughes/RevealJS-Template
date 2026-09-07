@@ -6,12 +6,12 @@ import hljs from "highlight.js";
   "use strict";
   function t() {
     var n = e.createElement("style");
-    (n.type = "text/css"),
+    ((n.type = "text/css"),
       (n.innerHTML = g(
         ".{0}{border-collapse:collapse}.{0} td{padding:0}.{1}:before{content:attr({2})}",
         [v, L, b],
       )),
-      e.getElementsByTagName("head")[0].appendChild(n);
+      e.getElementsByTagName("head")[0].appendChild(n));
   }
   function r(t) {
     "interactive" === e.readyState || "complete" === e.readyState
@@ -37,13 +37,13 @@ import hljs from "highlight.js";
   function o(n, e) {
     if ("string" == typeof n) {
       var t = document.createElement("code");
-      return (t.innerHTML = n), s(t, e);
+      return ((t.innerHTML = n), s(t, e));
     }
   }
   function s(n, e) {
     e = e || { singleLine: !1 };
     var t = e.singleLine ? 0 : 1;
-    return c(n), a(n.innerHTML, t);
+    return (c(n), a(n.innerHTML, t));
   }
   function a(n, e) {
     var t = u(n);

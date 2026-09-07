@@ -2,10 +2,11 @@
   "object" == typeof exports && "undefined" != typeof module
     ? (module.exports = o())
     : "function" == typeof define && define.amd
-    ? define(o)
-    : ((e =
-        "undefined" != typeof globalThis ? globalThis : e || self).RevealZoom =
-        o());
+      ? define(o)
+      : ((e =
+          "undefined" != typeof globalThis
+            ? globalThis
+            : e || self).RevealZoom = o());
 })(this, function () {
   "use strict";
   /*!
@@ -46,15 +47,15 @@
           s)
         )
           if (1 === t)
-            (document.body.style.transform = ""),
+            ((document.body.style.transform = ""),
               (document.body.style.OTransform = ""),
               (document.body.style.msTransform = ""),
               (document.body.style.MozTransform = ""),
-              (document.body.style.WebkitTransform = "");
+              (document.body.style.WebkitTransform = ""));
           else {
             var i = n.x + "px " + n.y + "px",
               d = "translate(" + -o.x + "px," + -o.y + "px) scale(" + t + ")";
-            (document.body.style.transformOrigin = i),
+            ((document.body.style.transformOrigin = i),
               (document.body.style.OTransformOrigin = i),
               (document.body.style.msTransformOrigin = i),
               (document.body.style.MozTransformOrigin = i),
@@ -63,7 +64,7 @@
               (document.body.style.OTransform = d),
               (document.body.style.msTransform = d),
               (document.body.style.MozTransform = d),
-              (document.body.style.WebkitTransform = d);
+              (document.body.style.WebkitTransform = d));
           }
         else
           1 === t
@@ -79,17 +80,17 @@
               (document.body.style.width = 100 * t + "%"),
               (document.body.style.height = 100 * t + "%"),
               (document.body.style.zoom = t));
-        (e = t),
+        ((e = t),
           document.documentElement.classList &&
             (1 !== e
               ? document.documentElement.classList.add("zoomed")
-              : document.documentElement.classList.remove("zoomed"));
+              : document.documentElement.classList.remove("zoomed")));
       }
       function m() {
         var o = 0.12 * window.innerWidth,
           i = 0.12 * window.innerHeight,
           d = l();
-        n < i
+        (n < i
           ? window.scroll(d.x, d.y - (14 / e) * (1 - n / i))
           : n > window.innerHeight - i &&
             window.scroll(
@@ -102,7 +103,7 @@
               window.scroll(
                 d.x + (1 - (window.innerWidth - t) / o) * (14 / e),
                 d.y,
-              );
+              ));
       }
       function l() {
         return {
@@ -130,12 +131,12 @@
             else {
               if (((t.x = t.x || 0), (t.y = t.y || 0), t.element)) {
                 var n = t.element.getBoundingClientRect();
-                (t.x = n.left - 20),
+                ((t.x = n.left - 20),
                   (t.y = n.top - 20),
                   (t.width = n.width + 40),
-                  (t.height = n.height + 40);
+                  (t.height = n.height + 40));
               }
-              void 0 !== t.width &&
+              (void 0 !== t.width &&
                 void 0 !== t.height &&
                 (t.scale = Math.max(
                   Math.min(
@@ -151,11 +152,11 @@
                   !1 !== t.pan &&
                     (i = setTimeout(function () {
                       d = setInterval(m, 1e3 / 60);
-                    }, 800)));
+                    }, 800))));
             }
           },
           out: function () {
-            clearTimeout(i), clearInterval(d), r({ x: 0, y: 0 }, 1), (e = 1);
+            (clearTimeout(i), clearInterval(d), r({ x: 0, y: 0 }, 1), (e = 1));
           },
           magnify: function (e) {
             this.to(e);
