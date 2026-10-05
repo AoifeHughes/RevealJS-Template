@@ -304,9 +304,8 @@ export default class AutoAnimate {
       fromProps.styles["transition"] = "none";
 
       // Animate towards the 'to' state
-      toProps.styles[
-        "transition"
-      ] = `all ${options.duration}s ${options.easing} ${options.delay}s`;
+      toProps.styles["transition"] =
+        `all ${options.duration}s ${options.easing} ${options.delay}s`;
       toProps.styles["transition-property"] = toStyleProperties.join(", ");
       toProps.styles["will-change"] = toStyleProperties.join(", ");
 
